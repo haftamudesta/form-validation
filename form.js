@@ -21,7 +21,6 @@ validateform();
   } else if (!isemailValid(emailinput.value.trim())) {
     errorMessages('invalid email,please provide valid email');
   } else if (TextArea.value.trim() === '') {
-    errorMessage.style.display = 'block';
     errorMessages('text area can not be empty');
   } else {
     errorMessage.style.display = 'none';
@@ -29,8 +28,7 @@ validateform();
 }
 isemailValid(email);
 {
-  const re =
-    /^[a-z-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const re = /^[a-z-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   return re.test(String(email));
 }
 errorMessages(message);
