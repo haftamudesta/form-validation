@@ -4,9 +4,6 @@ const emailinput = document.querySelector('#email');
 const textArea = document.querySelector('#Text-Area');
 const errorMessage = document.querySelector('.error-message');
 function validateform() {}
-function userInput() {}
-function textInput() {}
-function emailInput() {}
 function isemailValid() {}
 let email;
 form.addEventListener('submit', (events) => {
@@ -14,38 +11,29 @@ form.addEventListener('submit', (events) => {
   validateform();
 });
 validateform();{
-  userInput();
-  textInput();
-  emailInput();
+    if (userName.value.trim() === '') {
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'name can not be empty';
+      } else {
+        errorMessage.style.display = 'none';
+    }
+    if (textArea.value.trim() === '') {
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'text area can not be empty';
+      } else {
+        errorMessage.style.display = 'none';
+    }
+    if (emailinput.value.trim() === '') {
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'email can not be empty';
+      } else if (!isemailValid(emailinput.value.trim())) {
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'your emaial is invalid, please enter valid email';
+      } else {
+        errorMessage.style.display = 'none';
+      }
 }
-userInput;{
-  if (userName.value.trim() === '') {
-    errorMessage.style.display = 'block';
-    errorMessage.textContent = 'name can not be empty';
-  } else {
-    errorMessage.style.display = 'none';
-  }
-}
-textInput();{
-  if (textArea.value.trim() === '') {
-    errorMessage.style.display = 'block';
-    errorMessage.textContent = 'text area can not be empty';
-  } else {
-    errorMessage.style.display = 'none';
-  }
-}
-emailInput();{
-  if (emailinput.value.trim() === '') {
-    errorMessage.style.display = 'block';
-    errorMessage.textContent = 'email can not be empty';
-  } else if (!isemailValid(emailinput.value.trim())) {
-    errorMessage.style.display = 'block';
-    errorMessage.textContent = 'your emaial is invalid, please enter valid email';
-  } else {
-    errorMessage.style.display = 'none';
-  }
-}
-isemailValid();{
-  const re = /^[a-z-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  return re.test(String(email));
-}
+// isemailValid();{
+//   const re = /^[a-z-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+//   return re.test(String(email));
+// }
