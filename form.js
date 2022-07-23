@@ -22,11 +22,10 @@ validateform();
     errorMessage.textContent = 'text area can not be empty';
   } else {
     form.remove();
-    errorMessage.style.display = 'none';
   }
 }
-isemailValid(email);
-{
-  const re = /^[a-z-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z-Z0-9-]+(?:\.[a-z-Z0-9-]+)*$/;
-  return re.test(email);
-}
+// isemailValid(email);
+// {
+//   const re = /^[a-z-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z-Z0-9-]+(?:\.[a-z-Z0-9-]+)*$/;
+//   return re.test(email);
+// }
