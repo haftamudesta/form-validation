@@ -6,34 +6,32 @@ const errorMessage = document.querySelector('.error-message');
 function validateform() {}
 function isemailValid() {}
 let email;
+let isFormvalid = false;
 form.addEventListener('submit', (events) => {
   events.preventDefault();
   validateform();
 });
-validateform();{
-    if (userName.value.trim() === '') {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'name can not be empty';
-      } else {
-        errorMessage.style.display = 'none';
+function validateform(){
+    if (userName.value.trim() == '') {
+      errorMessage.style.display = "block";
+      errorMessage.textContent = 'name can not be empty';
+    } else if (emailinput.value.trim() == "") {
+      errorMessage.style.display = "block";
+      errorMessage.textContent = 'email can not be empty';
+    } else if (!isemailValid(emailinput.value)) {
+      errorMessage.style.display = "block";
+      errorMessage.textContent = 'invalid email, please enter a valid email';
     }
-    if (textArea.value.trim() === '') {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'text area can not be empty';
-      } else {
-        errorMessage.style.display = 'none';
+    else if (TextArea.value.trim() == "") {
+      errorMessage.style.display = "block";
+      errorMessage.textContent = 'text area can not be empty';
+    } else {
+        form.remove();
+        errorMessage.style.display = "none";
     }
-    if (emailinput.value.trim() === '') {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'email can not be empty';
-      } else if (!isemailValid(emailinput.value.trim())) {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'your emaial is invalid, please enter valid email';
-      } else {
-        errorMessage.style.display = 'none';
-      }
-}
-// isemailValid();{
-//   const re = /^[a-z-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-//   return re.test(String(email));
-// }
+  }
+  function isemailValid(email);
+   {
+     const re = /^[a-z-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z-Z0-9-]+(?:\.[a-z-Z0-9-]+)*$/;
+      return re.test(email);
+   }
