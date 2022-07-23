@@ -13,19 +13,22 @@ form.addEventListener('submit', (events) => {
 });
 validateform(); {
     if (userName.value.trim() == '') {
-      errorMessage.style.display = "block";
+      
       errorMessage.textContent = 'name can not be empty';
-    } else if (emailinput.value.trim() == "") {
-      errorMessage.style.display = "block";
+    }
+    else if (emailinput.value.trim() == "") {
+      
       errorMessage.textContent = 'email can not be empty';
-    } else if (!isemailValid(emailinput.value)) {
-      errorMessage.style.display = "block";
+    }
+    else if (!isemailValid(emailinput.value)) {
+      
       errorMessage.textContent = 'invalid email, please enter a valid email';
     }
     else if (TextArea.value.trim() == "") {
-      errorMessage.style.display = "block";
+      
       errorMessage.textContent = 'text area can not be empty';
-    } else {
+    }
+    else {
         form.remove();
         errorMessage.style.display = "none";
     }
