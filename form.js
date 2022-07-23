@@ -12,7 +12,7 @@ form.addEventListener('submit', (events) => {
 });
 validateform();
 {
-    if (emailinput.ariaValueMax.trim() === '') {
+    if (emailinput.value.trim() === '') {
         errorMessage.textContent = 'email can not be empty';
     }
     else
