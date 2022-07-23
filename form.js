@@ -10,7 +10,7 @@ form.addEventListener('submit', (events) => {
   if (userName.value.trim() === '') {
     errorMessage.style.display = 'block';
     errorMessage.textContent = 'name can not be empty';
-  } else if (emailinput.value.trim() === "") {
+  } else if (emailinput.value.trim() === '') {
     errorMessage.textContent = 'email can not be empty';
   } else if (!isemailValid(emailinput.value)) {
     errorMessage.textContent = 'email is not valid';
