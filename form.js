@@ -8,18 +8,9 @@ function isemailValid() {}
 let email;
 form.addEventListener('submit', (events) => {
   events.preventDefault();
-  validateform();
-});
-validateform();
-{
     if (emailinput.value.trim() === '') {
         errorMessage.textContent = 'email can not be empty';
     }
     else
-        return true; 
-}
-// isemailValid(email);
-// {
-//   const re = /^[a-z-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z-Z0-9-]+(?:\.[a-z-Z0-9-]+)*$/;
-//   return re.test(email);
-// }
+        form.remove(); 
+});
