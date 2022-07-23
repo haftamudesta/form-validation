@@ -3,7 +3,6 @@ const userName = document.querySelector('#name');
 const emailinput = document.querySelector('#email');
 const textArea = document.querySelector('#Text-Area');
 const errorMessage = document.querySelector('.error-message');
-function validateform() {}
 function isemailValid() {}
  let email;
 form.addEventListener('submit', (events) => {
@@ -26,8 +25,7 @@ form.addEventListener('submit', (events) => {
         errorMessage.style.display = "none";
     }
 });
-function isemailValid(email);
-  {
+isemailValid(email);{
     const re = /^[a-z-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     return re.test(email);
   }
