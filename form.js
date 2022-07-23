@@ -11,7 +11,7 @@ form.addEventListener('submit', (events) => {
   events.preventDefault();
   validateform();
 });
-function validateform(){
+validateform(); {
     if (userName.value.trim() == '') {
       errorMessage.style.display = "block";
       errorMessage.textContent = 'name can not be empty';
@@ -30,8 +30,7 @@ function validateform(){
         errorMessage.style.display = "none";
     }
   }
-  function isemailValid(email);
-   {
+   isemailValid(email);{
      const re = /^[a-z-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z-Z0-9-]+(?:\.[a-z-Z0-9-]+)*$/;
       return re.test(email);
    }
