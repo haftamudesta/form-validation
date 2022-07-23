@@ -4,9 +4,9 @@ const emailinput = document.querySelector('#email');
 const textArea = document.querySelector('#Text-Area');
 const errorMessage = document.querySelector('.error-message');
 function validateform() { }
-function userName() { }
-function textArea() { }
-function email() {}
+function user_Name() { }
+function text_Area() { }
+function email_Address() {}
 function isemailValid() {}
 let email;
 form.addEventListener('submit', (events) => {
@@ -14,12 +14,11 @@ form.addEventListener('submit', (events) => {
   validateform();
 });
 validateform(); {
-    userName();
-    extArea();
-    email();
-  
+    user_Name();
+    text_Area();
+    email_Address(); 
 }
-userName(); { 
+user_Name(); { 
     if (userName.value.trim() === '') {
         errorMessage.style.display = 'block';
         errorMessage.textContent = 'name can not be empty';
@@ -27,7 +26,7 @@ userName(); {
         errorMessage.style.display = 'none';
       }
 }
-textArea(); {
+text_Area(); {
     if (textArea.value.trim() === '') {
         errorMessage.style.display = 'block';
         errorMessage.textContent = 'text area can not be empty';
@@ -35,7 +34,7 @@ textArea(); {
         errorMessage.style.display = 'none';
       }
 }
-email(); {
+email_Address(); {
     if (emailinput.value.trim() === '') {
         errorMessage.style.display = 'block';
         errorMessage.textContent = 'email can not be empty';
