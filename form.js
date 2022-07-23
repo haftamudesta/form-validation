@@ -14,7 +14,9 @@ validateform();
 {
     if (emailinput.ariaValueMax.trim() === '') {
         errorMessage.textContent = 'email can not be empty';
-  }
+    }
+    else
+        return true; 
 }
 // isemailValid(email);
 // {
